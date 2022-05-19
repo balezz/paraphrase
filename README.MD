@@ -5,6 +5,10 @@ Baseline is one-class classification (in fact regression) with huggingface deber
 Trying to beat baseline with finetuning deberta as language model with 2.4 GB patent texts. 
 Unfortunately, not done, may be too much garbage in patent texts.  
 
+### Pearson for baseline and finetuned language models
+
+![result](finetune_lm/result.png "Pearson for baseline and finetuned language models")
+
 ## Deberta-small baseline 
 
 | Epoch | Training Loss | Validation Loss | Pearson  |
@@ -17,6 +21,11 @@ Unfortunately, not done, may be too much garbage in patent texts.
 
 ## Deberta-small pretrained as language model lr=1e-4
 
+First stage:  
+loss = 0.02, perplexity = 1.003  
+
+Second stage:  
+
 | Epoch | Training Loss | Validation Loss | Pearson  |
 |-------|---------------|-----------------|----------|
 | 1     | No log        | 0.044398        | 0.586044 |
@@ -26,6 +35,11 @@ Unfortunately, not done, may be too much garbage in patent texts.
 | 5     | 0.021400      | 0.030229        | 0.761607 |
 
 ## Deberta-small pretrained as language model lr=1e-9
+
+First stage:  
+loss = 12.3, perplexity = 5042  
+
+Second stage:  
 
 | Epoch | Training Loss | Validation Loss |  Pearson |
 |------:|--------------:|----------------:|---------:|
